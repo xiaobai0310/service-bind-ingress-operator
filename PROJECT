@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: service-bind-ingress-operator
 repo: github.com/xiaobai0310/service-bind-ingress-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: bailu.io
+  group: service-bind-ingress
+  kind: ServiceBindingIngress
+  path: github.com/xiaobai0310/service-bind-ingress-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"

@@ -1,0 +1,27 @@
+# permissions for end users to view servicebindingingresses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: servicebindingingress-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: service-bind-ingress-operator
+    app.kubernetes.io/part-of: service-bind-ingress-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: servicebindingingress-viewer-role
+rules:
+- apiGroups:
+  - service-bind-ingress.bailu.io
+  resources:
+  - servicebindingingresses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - service-bind-ingress.bailu.io
+  resources:
+  - servicebindingingresses/status
+  verbs:
+  - get
