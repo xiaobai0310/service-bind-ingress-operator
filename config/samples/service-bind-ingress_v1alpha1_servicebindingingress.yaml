@@ -1,0 +1,12 @@
+apiVersion: service-bind-ingress.bailu.io/v1alpha1
+kind: ServiceBindingIngress
+metadata:
+  labels:
+    app.kubernetes.io/name: servicebindingingress
+    app.kubernetes.io/instance: servicebindingingress-sample
+    app.kubernetes.io/part-of: service-bind-ingress-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: service-bind-ingress-operator
+  name: servicebindingingress-sample
+spec:
+  # TODO(user): Add fields here

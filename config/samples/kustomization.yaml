@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- service-bind-ingress_v1alpha1_servicebindingingress.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
