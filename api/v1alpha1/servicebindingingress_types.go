@@ -29,7 +29,16 @@ type ServiceBindingIngressSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of ServiceBindingIngress. Edit servicebindingingress_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	//Foo string `json:"foo,omitempty"`
+
+	// EnableIngress is a flag to enable ingress,it can be empty
+	EnableIngress bool `json:"enable_ingress,omitempty"`
+	// EnableService is a flag to enable service,requeired
+	EnableService bool `json:"enable_service"`
+	// Replicas is the number of replicas,requeired
+	Replicas int32 `json:"replicas"`
+	// Image is the image to use,requeired
+	Image string `json:"image"`
 }
 
 // ServiceBindingIngressStatus defines the observed state of ServiceBindingIngress

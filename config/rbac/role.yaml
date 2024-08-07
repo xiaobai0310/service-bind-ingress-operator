@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - service-bind-ingress.bailu.io
+  resources:
+  - servicebindingingresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - service-bind-ingress.bailu.io
+  resources:
+  - servicebindingingresses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - service-bind-ingress.bailu.io
+  resources:
+  - servicebindingingresses/status
+  verbs:
+  - get
+  - patch
+  - update
